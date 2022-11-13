@@ -1,9 +1,9 @@
 <div class="content">
     <div class="title">
-        <h1>Categorias</h1>
+        <h1>CATEGORIAS</h1>
     </div>
 
-    <button class="mat-elevation-z4" mat-raised-button color="primary">NOVA CATEGORIA</button>
+    <button class="mat-elevation-z4" (click)="navegarParaCategoriaCreate()" mat-raised-button color="primary">NOVA CATEGORIA</button>
 
     <div class="mat-elevation-z4 content-table">
       <table class="table" mat-table [dataSource]="categorias">
