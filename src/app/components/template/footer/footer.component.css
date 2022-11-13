@@ -1,0 +1,12 @@
+.footer{
+    background-color: rgba(0, 0, 0, 0.781);
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    height: 5%;
+}
+
+span{
+    color: white;
+}
