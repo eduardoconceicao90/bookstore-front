@@ -33,6 +33,11 @@ export class CategoriaService {
     const url = `${this.baseUrl}/categorias/${id}`
     return this.http.delete<void>(url);
   }
+
+  update(categoria: Categoria): Observable<Categoria>{
+    const url = `${this.baseUrl}/categorias/${categoria.id}`
+    return this.http.put<Categoria>(url, categoria);
+  }
   
   message(str: String): void {
     this._snack.open(`${str}`, 'OK', {
