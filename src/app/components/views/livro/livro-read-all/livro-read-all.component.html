@@ -21,7 +21,7 @@
         <ng-container matColumnDef="livros">
           <th mat-header-cell *matHeaderCellDef> LER LIVRO </th>
           <td mat-cell *matCellDef="let element">
-            <a class="livros">
+            <a>
               <i class="material-icons">book</i>
             </a>
           </td>
@@ -30,7 +30,7 @@
         <ng-container matColumnDef="acoes">
           <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
           <td mat-cell *matCellDef="let element">
-            <a class="edit" href="#">
+            <a class="edit" routerLink="{{ element.id }}/update">
               <i class="material-icons">edit</i>
             </a>
             <a class="delete" href="#">
