@@ -7,6 +7,10 @@
     "build": "ng build --prod",
     "watch": "ng build --watch --configuration development"
   },
+  "engines": {
+    "node": "16.17.1",
+    "npm": "8.19.3"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.3",
