@@ -1,0 +1,26 @@
+<form>
+    <h1>CRIANDO NOVO LIVRO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Título</mat-label>
+        <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Curso Spring Boot com Angular" maxlength="50">
+        <mat-error *ngIf="titulo.invalid">{{ getMessageTitulo() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Nome do autor</mat-label>
+        <input matInput [(ngModel)]="livro.nome_autor" [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Eduardo Conceição" maxlength="50">
+        <mat-error *ngIf="nome_autor.invalid">{{ getMessageNomeAutor() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput [(ngModel)]="livro.texto" [formControl]="texto" required type="text" name="texto" placeholder="Ex. Lorem ipsum" maxlength="2000000"></textarea>
+        <mat-error *ngIf="texto.invalid">{{ getMessageTexto() }}</mat-error>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button [disabled]="getMessageTitulo() || getMessageNomeAutor() || getMessageTexto()" class="mat-elevation-z4" (click)="create()" mat-raised-button color="primary">CRIAR</button>
+        <button class="mat-elevation-z4" (click)="cancel()" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>
