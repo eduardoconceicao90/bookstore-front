@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://bookstore-heroku-api.herokuapp.com'
+  baseUrl: 'https://bookstore-api-production.up.railway.app'
 };
